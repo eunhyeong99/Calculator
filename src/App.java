@@ -4,7 +4,8 @@ import java.util.Scanner;
 public class App {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        Calculator calculator = new Calculator();
+        ArithmeticCalculator arithmeticCalculator = new ArithmeticCalculator();
+        CircleCalculator circleCalculator = new CircleCalculator();
 
         // 값을 담을 변수
         int result = 0;
@@ -30,40 +31,38 @@ public class App {
 
                     switch (operator) {
                         case "+":
-                            result = calculator.calculate(firstNumber, secondNumber, "+");
-                            calculator.setResultArr(result);
+                            result = arithmeticCalculator.calculate(firstNumber, secondNumber, "+");
+                            arithmeticCalculator.setResultArr(result);
                             break;
                         case "-":
-                            result = calculator.calculate(firstNumber, secondNumber, "-");
-                            calculator.setResultArr(result);
+                            result = arithmeticCalculator.calculate(firstNumber, secondNumber, "-");
+                            arithmeticCalculator.setResultArr(result);
                             break;
                         case "*":
-                            result = calculator.calculate(firstNumber, secondNumber, "*");
-                            calculator.setResultArr(result);
+                            result = arithmeticCalculator.calculate(firstNumber, secondNumber, "*");
+                            arithmeticCalculator.setResultArr(result);
                             break;
                         case "/":
-                            result = calculator.calculate(firstNumber, secondNumber, "/");
-                            calculator.setResultArr(result);
+                            result = arithmeticCalculator.calculate(firstNumber, secondNumber, "/");
+                            arithmeticCalculator.setResultArr(result);
                             break;
                     }
-                    System.out.println("결과: " + calculator.getResultArr());
+                    System.out.println("결과: " + arithmeticCalculator.getResultArr());
 
                     System.out.println("가장 먼저 저장된 연산 결과를 삭제하시겠습니까? (remove 입력 시 삭제 N 입력 시 진행)");
                     answer = sc.next();
-                    calculator.removeResult(answer);
+                    arithmeticCalculator.removeResult(answer);
 
                     System.out.println("저장된 연산결과를 조회하시겠습니까? (inquiry 입력 시 조회 N 입력 시 진행)");
                     answer = sc.next();
-                    calculator.inquiryResults(answer);
+                    arithmeticCalculator.inquiryResults(answer);
                     break;
                 case 2:
                     System.out.print("반지름:");
                     double radius = sc.nextDouble();
-                    calculator.calculateCircleArea(radius);
-                    calculator.setCircleArr(radius);
-                    calculator.getCircleArr();
-
-
+                    circleCalculator.calculateCircleArea(radius);
+                    circleCalculator.setCircleArr(radius);
+                    circleCalculator.getCircleArr();
 
                     break;
             }

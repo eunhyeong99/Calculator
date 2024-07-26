@@ -8,7 +8,7 @@ class DivisionByZeroException {
 public class Calculator {
 
     public void Calculator(int firstNum, int secondNum, String operator) {
-        if (secondNum == 0) {
+
             int result;
 
             switch (operator) {
@@ -30,7 +30,6 @@ public class Calculator {
             }
         }
 
-    }
 
 }
 

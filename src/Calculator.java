@@ -45,6 +45,11 @@ public class Calculator {
         this.resultArr.add(result);
     }
 
+    public void removeResult(String message){
+        if(message.equals("remove")){
+            resultArr.remove(0);
+        }
+    }
 
 }
 

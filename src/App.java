@@ -24,29 +24,27 @@ public class App {
 
             switch (operator) {
                 case "+":
-                    result = calculator.Calculator(firstNumber,secondNumber,"+");
+                    result = calculator.Calculator(firstNumber, secondNumber, "+");
                     calculator.setResultArr(result);
                     break;
                 case "-":
-                    result = calculator.Calculator(firstNumber,secondNumber,"-");
+                    result = calculator.Calculator(firstNumber, secondNumber, "-");
                     calculator.setResultArr(result);
                     break;
                 case "*":
-                    result = calculator.Calculator(firstNumber,secondNumber,"*");
+                    result = calculator.Calculator(firstNumber, secondNumber, "*");
                     calculator.setResultArr(result);
                     break;
                 case "/":
-                    result = calculator.Calculator(firstNumber,secondNumber,"/");
+                    result = calculator.Calculator(firstNumber, secondNumber, "/");
                     calculator.setResultArr(result);
                     break;
             }
-            System.out.println("결과: "+ calculator.getResultArr());
+            System.out.println("결과: " + calculator.getResultArr());
 
-//            System.out.println("가장 먼저 저장된 연산 결과를 삭제하시겠습니까? (remove 입력 시 삭제 N 입력 시 진행)");
+            System.out.println("가장 먼저 저장된 연산 결과를 삭제하시겠습니까? (remove 입력 시 삭제 N 입력 시 진행)");
             String answer = sc.next();
-//            if(answer.equals("remove")){
-//                resultArr.remove(0);
-//            }
+            calculator.removeResult(answer);
 
 //            System.out.println("저장된 연산결과를 조회하시겠습니까? (inquiry 입력 시 조회 N 입력 시 진행)");
 //            answer = sc.next();

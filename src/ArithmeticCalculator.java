@@ -27,6 +27,14 @@ class DivideOperator {
         return result;
     }
 }
+
+class ModOperator {
+    public int operate(int firstNum,int secondNum) {
+        int result = firstNum * secondNum;
+        return result;
+    }
+}
+
 public class ArithmeticCalculator extends Calculator{
 
 

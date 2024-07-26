@@ -46,6 +46,10 @@ public class App {
                             result = new DivideOperator().operate(firstNumber,secondNumber);
                             arithmeticCalculator.setResultArr(result);
                             break;
+                        case "%":
+                            result = new ModOperator().operate(firstNumber,secondNumber);
+                            arithmeticCalculator.setResultArr(result);
+                            break;
                     }
                     System.out.println("결과: " + arithmeticCalculator.getResultArr());
 

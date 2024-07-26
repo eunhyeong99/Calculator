@@ -46,11 +46,9 @@ public class App {
             String answer = sc.next();
             calculator.removeResult(answer);
 
-//            System.out.println("저장된 연산결과를 조회하시겠습니까? (inquiry 입력 시 조회 N 입력 시 진행)");
-//            answer = sc.next();
-//            if(answer.equals("inquiry")){
-//                System.out.println( calculator.getResultArr());
-//            }
+            System.out.println("저장된 연산결과를 조회하시겠습니까? (inquiry 입력 시 조회 N 입력 시 진행)");
+            answer = sc.next();
+            calculator.inquiryResults(answer);
 
             System.out.println("더 계산하시겠습니까?(exit 입력 시 종료) Y/exit");
             answer = sc.next();

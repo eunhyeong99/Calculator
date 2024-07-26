@@ -51,5 +51,11 @@ public class Calculator {
         }
     }
 
+    public void inquiryResults(String message){
+        if(message.equals("inquiry")){
+            System.out.println(resultArr);
+        }
+    }
+
 }
 

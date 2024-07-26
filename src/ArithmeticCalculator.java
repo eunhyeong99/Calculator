@@ -1,30 +1,34 @@
 import java.util.ArrayList;
-
-public class ArithmeticCalculator extends Calculator{
-
-    public int calculate(int firstNum, int secondNum, String operator) {
-
-        int result = 0;
-
-        switch (operator) {
-            case "+":
-                result = firstNum + secondNum;
-                break;
-            case "-":
-                result = firstNum - secondNum;
-                break;
-            case "*":
-                result = firstNum * secondNum;
-                break;
-            case "/":
-                if (secondNum == 0) {
-                    new DivisionByZeroException("0으로 나눌 수 없습니다.");
-                }
-                result = firstNum / secondNum;
-                break;
-        }
+class AddOperator {
+    public int operate(int firstNum,int secondNum) {
+        int result = firstNum + secondNum;
         return result;
     }
+}
+
+class SubtractOperator {
+    public int operate(int firstNum,int secondNum) {
+        int result = firstNum - secondNum;
+        return result;
+    }
+}
+
+class MultiplyOperator {
+    public int operate(int firstNum,int secondNum) {
+        int result = firstNum * secondNum;
+        return result;
+    }
+}
+
+
+class DivideOperator {
+    public int operate(int firstNum,int secondNum) {
+        int result = firstNum / secondNum;
+        return result;
+    }
+}
+public class ArithmeticCalculator extends Calculator{
+
 
     public ArrayList<Integer> getResultArr() {
         return super.resultArr;

@@ -31,19 +31,19 @@ public class App {
 
                     switch (operator) {
                         case "+":
-                            result = arithmeticCalculator.calculate(firstNumber, secondNumber, "+");
+                            result = new AddOperator().operate(firstNumber,secondNumber);
                             arithmeticCalculator.setResultArr(result);
                             break;
                         case "-":
-                            result = arithmeticCalculator.calculate(firstNumber, secondNumber, "-");
+                            result = new SubtractOperator().operate(firstNumber,secondNumber);
                             arithmeticCalculator.setResultArr(result);
                             break;
                         case "*":
-                            result = arithmeticCalculator.calculate(firstNumber, secondNumber, "*");
+                            result = new MultiplyOperator().operate(firstNumber,secondNumber);
                             arithmeticCalculator.setResultArr(result);
                             break;
                         case "/":
-                            result = arithmeticCalculator.calculate(firstNumber, secondNumber, "/");
+                            result = new DivideOperator().operate(firstNumber,secondNumber);
                             arithmeticCalculator.setResultArr(result);
                             break;
                     }

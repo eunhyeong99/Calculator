@@ -24,19 +24,19 @@ public class App {
 
             switch (operator) {
                 case "+":
-                    result = calculator.Calculator(firstNumber, secondNumber, "+");
+                    result = calculator.calculate(firstNumber, secondNumber, "+");
                     calculator.setResultArr(result);
                     break;
                 case "-":
-                    result = calculator.Calculator(firstNumber, secondNumber, "-");
+                    result = calculator.calculate(firstNumber, secondNumber, "-");
                     calculator.setResultArr(result);
                     break;
                 case "*":
-                    result = calculator.Calculator(firstNumber, secondNumber, "*");
+                    result = calculator.calculate(firstNumber, secondNumber, "*");
                     calculator.setResultArr(result);
                     break;
                 case "/":
-                    result = calculator.Calculator(firstNumber, secondNumber, "/");
+                    result = calculator.calculate(firstNumber, secondNumber, "/");
                     calculator.setResultArr(result);
                     break;
             }

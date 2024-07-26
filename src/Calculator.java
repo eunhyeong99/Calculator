@@ -10,10 +10,13 @@ class DivisionByZeroException {
 public class Calculator {
 
     //연산결과를 저장하는 List
-    private ArrayList<Integer> resultArr = new ArrayList<>();
+    private ArrayList<Integer> resultArr;
 
 
-    public int Calculator(int firstNum, int secondNum, String operator) {
+    public Calculator(){
+        this.resultArr = new ArrayList<>();
+    }
+    public int calculate(int firstNum, int secondNum, String operator) {
 
         int result = 0;
 

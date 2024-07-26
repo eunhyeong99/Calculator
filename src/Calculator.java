@@ -7,9 +7,10 @@ class DivisionByZeroException {
 
 public class Calculator {
 
-    public void Calculator(int firstNum, int secondNum, String operator) {
 
-            int result;
+    public int Calculator(int firstNum, int secondNum, String operator) {
+
+            int result = 0;
 
             switch (operator) {
                 case "+":
@@ -19,7 +20,7 @@ public class Calculator {
                     result = firstNum - secondNum;
                     break;
                 case "*":
-                    result = firstNum * secondNum
+                    result = firstNum * secondNum;
                     break;
                 case "/":
                     if (secondNum == 0) {
@@ -28,6 +29,7 @@ public class Calculator {
                     result = firstNum / secondNum;
                     break;
             }
+             return result;
         }
 
 

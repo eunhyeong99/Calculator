@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class App {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
+        Calculator calculator = new Calculator();
 
         // 값을 담을 변수
         int result = 0;
@@ -24,19 +24,19 @@ public class App {
 
             switch (operator) {
                 case "+":
-                    result = firstNumber + secondNumber;
+                    result = calculator.Calculator(firstNumber,secondNumber,"+");
                     resultArr.add(result);
                     break;
                 case "-":
-                    result = firstNumber - secondNumber;
+                    result = calculator.Calculator(firstNumber,secondNumber,"-");
                     resultArr.add(result);
                     break;
                 case "*":
-                    result = firstNumber * secondNumber;
+                    result = calculator.Calculator(firstNumber,secondNumber,"*");
                     resultArr.add(result);
                     break;
                 case "/":
-                    result = firstNumber / secondNumber;
+                    result = calculator.Calculator(firstNumber,secondNumber,"/");
                     resultArr.add(result);
                     break;
             }

@@ -11,11 +11,16 @@ public class Calculator {
 
     //연산결과를 저장하는 List
     private ArrayList<Integer> resultArr;
+    private ArrayList<Double> circleArr;
+
+    private static final double PI = 3.141592;
 
 
-    public Calculator(){
+    public Calculator() {
         this.resultArr = new ArrayList<>();
+        this.circleArr = new ArrayList<>();
     }
+
     public int calculate(int firstNum, int secondNum, String operator) {
 
         int result = 0;
@@ -48,16 +53,32 @@ public class Calculator {
         this.resultArr.add(result);
     }
 
-    public void removeResult(String message){
-        if(message.equals("remove")){
+    public void removeResult(String message) {
+        if (message.equals("remove")) {
             resultArr.remove(0);
         }
     }
 
-    public void inquiryResults(String message){
-        if(message.equals("inquiry")){
+    public void inquiryResults(String message) {
+        if (message.equals("inquiry")) {
             System.out.println(resultArr);
         }
+    }
+
+    public double calculateCircleArea(double radius) {
+        double area = PI * radius * radius;
+        System.out.println("원의 너비: " + area);
+        return area;
+    }
+
+    public ArrayList<Double> getCircleArr() {
+        System.out.println(circleArr);
+        return circleArr;
+    }
+
+    public void setCircleArr(double radius) {
+        double area = PI * radius * radius;
+        circleArr.add(area);
     }
 
 }

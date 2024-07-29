@@ -66,6 +66,10 @@ public class App {
                     break;
             }
 
+            System.out.print("기준값을 입력하세요: ");
+            result = sc.nextInt();
+            arithmeticCalculator.printResultsGreatest(result);
+
 
             System.out.println("더 계산하시겠습니까?(exit 입력 시 종료) Y/exit");
             answer = sc.next();

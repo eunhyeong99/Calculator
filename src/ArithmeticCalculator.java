@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
 
 
 public class ArithmeticCalculator extends Calculator {
@@ -46,4 +48,11 @@ public class ArithmeticCalculator extends Calculator {
         }
     }
 
+    public void printResultsGreatest(double value) {
+        List<Double> results = resultArr.stream()
+                .filter(result -> result > value)
+                .collect(Collectors.toList());
+
+        System.out.println("입력된 값보다 큰 연산 결과: " + results);
+    }
 }

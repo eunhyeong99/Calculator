@@ -31,24 +31,19 @@ public class App {
 
                     switch (operator) {
                         case "+":
-                            result = new AddOperator().operate(firstNumber,secondNumber);
-                            arithmeticCalculator.setResultArr(result);
+                            arithmeticCalculator.Calculate(firstNumber,secondNumber,operator);
                             break;
                         case "-":
-                            result = new SubtractOperator().operate(firstNumber,secondNumber);
-                            arithmeticCalculator.setResultArr(result);
+                            arithmeticCalculator.Calculate(firstNumber,secondNumber,operator);
                             break;
                         case "*":
-                            result = new MultiplyOperator().operate(firstNumber,secondNumber);
-                            arithmeticCalculator.setResultArr(result);
+                            arithmeticCalculator.Calculate(firstNumber,secondNumber,operator);
                             break;
                         case "/":
-                            result = new DivideOperator().operate(firstNumber,secondNumber);
-                            arithmeticCalculator.setResultArr(result);
+                            arithmeticCalculator.Calculate(firstNumber,secondNumber,operator);
                             break;
                         case "%":
-                            result = new ModOperator().operate(firstNumber,secondNumber);
-                            arithmeticCalculator.setResultArr(result);
+                            arithmeticCalculator.Calculate(firstNumber,secondNumber,operator);
                             break;
                     }
                     System.out.println("결과: " + arithmeticCalculator.getResultArr());

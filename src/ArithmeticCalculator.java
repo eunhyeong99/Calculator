@@ -1,42 +1,30 @@
 import java.util.ArrayList;
-class AddOperator {
-    public int operate(int firstNum,int secondNum) {
-        int result = firstNum + secondNum;
-        return result;
+
+
+public class ArithmeticCalculator extends Calculator {
+
+    Operator operator;
+    public void Calculate(int a,int b,String op){
+        switch (op){
+            case "+":
+                operator = Operator.ADDOPERATOR;
+                break;
+            case "-":
+                operator = Operator.SUBSTRACTOPERATOR;
+                break;
+            case "*":
+                operator = Operator.MULTIPLYOPERATOR;
+                break;
+            case "/":
+                operator = Operator.DIVIDEOPERATOR;
+                break;
+            case "%":
+                operator = Operator.MODOPERATOR;
+                break;
+        }
+        int result = operator.operate(a, b);
+        setResultArr(result);
     }
-}
-
-class SubtractOperator {
-    public int operate(int firstNum,int secondNum) {
-        int result = firstNum - secondNum;
-        return result;
-    }
-}
-
-class MultiplyOperator {
-    public int operate(int firstNum,int secondNum) {
-        int result = firstNum * secondNum;
-        return result;
-    }
-}
-
-
-class DivideOperator {
-    public int operate(int firstNum,int secondNum) {
-        int result = firstNum / secondNum;
-        return result;
-    }
-}
-
-class ModOperator {
-    public int operate(int firstNum,int secondNum) {
-        int result = firstNum * secondNum;
-        return result;
-    }
-}
-
-public class ArithmeticCalculator extends Calculator{
-
 
     public ArrayList<Integer> getResultArr() {
         return super.resultArr;

@@ -1,11 +1,6 @@
 import java.util.ArrayList;
 
-class DivisionByZeroException {
-    public DivisionByZeroException(String message) {
-        System.out.println(message);
-    }
 
-}
 
 public class Calculator {
 
@@ -20,9 +15,6 @@ public class Calculator {
         this.resultArr = new ArrayList<>();
         this.circleArr = new ArrayList<>();
     }
-
-
-
 
 
 

@@ -22,15 +22,15 @@ public class ArithmeticCalculator extends Calculator {
                 operator = Operator.MODOPERATOR;
                 break;
         }
-        int result = operator.operate(a, b);
+        double result = operator.operate(a, b);
         setResultArr(result);
     }
 
-    public ArrayList<Integer> getResultArr() {
+    public ArrayList<Double> getResultArr() {
         return super.resultArr;
     }
 
-    public void setResultArr(int result) {
+    public void setResultArr(double result) {
         super.resultArr.add(result);
     }
 

@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Calculator {
 
     //연산결과를 저장하는 List
-    protected ArrayList<Integer> resultArr;
+    protected ArrayList<Double> resultArr;
     protected ArrayList<Double> circleArr;
     protected static final double PI = 3.141592;
 

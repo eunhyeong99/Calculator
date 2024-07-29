@@ -8,7 +8,7 @@ public class App {
         CircleCalculator circleCalculator = new CircleCalculator();
 
         // 값을 담을 변수
-        int result = 0;
+        double result = 0;
         // scanner 받을 변수
         String answer;
 

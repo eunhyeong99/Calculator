@@ -29,9 +29,11 @@ public class App {
                     String operator = sc.next();
 
 
+
                     switch (operator) {
                         case "+":
                             arithmeticCalculator.Calculate(firstNumber,secondNumber,operator);
+                            System.out.println("hello");
                             break;
                         case "-":
                             arithmeticCalculator.Calculate(firstNumber,secondNumber,operator);

@@ -32,7 +32,6 @@ public class App {
 
                     switch (operator) {
                         case "+":
-                        System.out.println("rwqrwqwr");
                             arithmeticCalculator.Calculate(firstNumber,secondNumber,operator);
                             break;
                         case "-":
